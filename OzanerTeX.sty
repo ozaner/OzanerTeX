@@ -7,7 +7,7 @@
 \usepackage{titling}
 \usepackage{hyperref}
 \usepackage{amssymb}
-\usepackage{amsmath}
+\usepackage{physics}
 
 
 %%% Preformatting
@@ -32,3 +32,11 @@
 
 % Stylized 'Ozaner' in bold
 \newcommand{\Ozanerbf}{\textbf{Oz$\boldsymbol\forall$n$\boldsymbol\in$$\boldsymbol{\mathbb R}$}}
+
+
+%%% Calculus
+% Square Bracket Evaluation: [f(x)]^a_b
+\newcommand*\evalb[3]{\displaystyle\left[#1\right]_{#2}^{#3}}
+
+% Differential: \int f(x)\diff x
+\newcommand{\diff}{\mathop{}\!\dd}

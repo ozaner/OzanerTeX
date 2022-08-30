@@ -34,13 +34,19 @@ Instead of colored boxes, hyper-references use colored text instead:
 
 \section{Base packages}
 The \Ozaner\TeX{} package includes several \texttt{\textbackslash usepackage} declarations. These are packages that I use commonly enough to simply include in every document. These packages are, in order of inclusion, listed below:
+
+\noindent\\\textit{Note}: Nested bullets denote packages that are included as dependencies of the parent bullet. These are only listed if I use them independently of their parent package.
+
 \begin{itemize}
   \item \href{https://ctan.org/pkg/titling}{\texttt{fontenc}}: properly renders certain special characters in text-mode.
   \item \href{https://ctan.org/pkg/geometry}{\texttt{geometry}}: used to adjust the document margins.
   \item \href{https://ctan.org/pkg/titling}{\texttt{titling}}: used to push back the title starting height.
   \item \href{https://ctan.org/pkg/hyperref}{\texttt{hyperref}}: adds commands for hyper-referencing, and adds hyper-references to the table of contents.
   \item \href{https://ctan.org/pkg/amsfonts}{\texttt{amssymb}}: Adds many useful mathematical symbols (e.g.\ blackboard bold letters ($\mathbb{R}$), arrows ($\curvearrowright$), inequalities ($\ngeq$), etc.).
-  \item \href{https://ctan.org/pkg/amsmath}{\texttt{amsmath}}: A general math package that adds many misc.\ features including: equation alignment, matrix environments, fraction variants, extensible arrows, creating operators, and substacks.
+  \item \href{https://ctan.org/pkg/physics}{\texttt{physics}}: adds a whole bunch of common functions (i.e.\ trig, logs, exp, matrix ops) as well as commands for typesetting matrices, derivatives, and vectors. Crucially, can now use $\vb v$ (\texttt{\textbackslash vb v}) instead of $\vec v$ (\texttt{\textbackslash vec v}) for vectors.
+  \begin{itemize}
+    \item \href{https://ctan.org/pkg/amsmath}{\texttt{amsmath}}: A general math package that adds many misc.\ features including: equation alignment, matrix environments, fraction variants, extensible arrows, creating operators, and substacks.
+  \end{itemize}
 \end{itemize}
 
 \section{Textual Commands}
@@ -51,5 +57,22 @@ The \Ozaner\TeX{} package includes several \texttt{\textbackslash usepackage} de
 \noindent\\The stylized version of my name I use in various places, including this package. The bolded version (i.e.\ \texttt{\textbackslash Ozanerbf}) is necessary as \texttt{\textbackslash textbf} won't boldface embedded math symbols.
 
 \noindent\\\textit{Note}: to typeset \Ozaner\TeX{} simply append \texttt{\textbackslash TeX} to the command, i.e.\ \texttt{\textbackslash Ozaner\textbackslash TeX\{\}}.
+
+\section{Calculus Commands}
+\subsection{\texttt{\textbackslash evalb}}
+\texttt{\textbackslash evalb\{f(x)\}\{a\}\{b\}} $\longrightarrow\evalb{f(x)}{a}{b}$
+
+\noindent\\Intended to denote the result of a definite integral after integration, but before evaluation:
+$$\int_0^5 2x\diff x = \evalb{x^2}{0}{5} = 5^2-0^2$$
+
+
+\subsection{\texttt{\textbackslash diff}}
+\texttt{\textbackslash diff x} $\longrightarrow\diff x$
+
+\noindent\\The \texttt{\textbackslash diff} is simply the \texttt{\textbackslash dd} command, from the \texttt{physics} package, prepended with a space. It, along with a variable following it, are intended to be used as the differential in an integral:
+$$\int x\diff x = x^2+C$$
+
+Without the prepended space, i.e.\ using \texttt{\textbackslash dd}, the differential is too close to the integrand:
+$$\int x\dd x = x^2+C$$
 
 \end{document}
