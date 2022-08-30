@@ -19,10 +19,10 @@ This document will serve as documentation, both in the form of examples and rati
 
 \section{Preformatting}
 \subsection{Margins}
-Via the \texttt{geometry} package, \Ozaner\TeX{} changes the default margin size to 1.5in.\ For reference, the article document class uses a margin size of 1.875in.
+Via the \texttt{geometry} package, the default margin size has been changed to 1.5in.\ For reference, the article document class uses a margin size of 1.875in.
 
 \subsection{Title starting height}
-Using the \texttt{titling} package, set the starting height of the title back by 7em.
+Using the \texttt{titling} package, the starting height of the title has been set back by 7em.
 
 \subsection{Hyper-reference styling}
 Instead of colored boxes, hyper-references use colored text instead:
@@ -74,5 +74,22 @@ $$\int x\diff x = x^2+C$$
 
 Without the prepended space, i.e.\ using \texttt{\textbackslash dd}, the differential is too close to the integrand:
 $$\int x\dd x = x^2+C$$
+
+\section{Set Theory Commands}
+\subsection{\texttt{\textbackslash pset}}
+\texttt{\textbackslash pset X} $\longrightarrow\pset X$
+
+\noindent\\Used to denote the powerset of some set $X$. For example:
+$$\pset{\{1,2\}}=\{\varnothing,\{1\},\{2\},\{1,2\}\}$$
+
+\subsection{\texttt{\textbackslash N, \textbackslash Z, \textbackslash Q, \textbackslash R, \textbackslash C, \textbackslash H}}
+\texttt{\textbackslash N} $\longrightarrow\N$\quad
+\texttt{\textbackslash R} $\longrightarrow\R$\\
+\texttt{\textbackslash Z} $\longrightarrow\Z$\quad
+\texttt{\textbackslash C} $\longrightarrow\C$\\
+\texttt{\textbackslash Q} $\longrightarrow\Q$\quad
+\texttt{\textbackslash H} $\longrightarrow\H$
+
+\noindent\\These are simply shorthands for the sets of 6 common number systems. Note that the quaternions command (\texttt{\textbackslash H}) overrides a different, unimportant, command.
 
 \end{document}
