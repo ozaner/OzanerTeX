@@ -1,0 +1,55 @@
+\documentclass{article}
+\usepackage{OzanerTeX}
+
+\begin{document}
+\title{\Ozaner\TeX{} Documentation}
+\author{Ozaner Hansha}
+\date{}
+\maketitle
+\setcounter{section}{-1}
+
+\section*{What is \Ozanerbf\TeX{}?}
+The eponymous \Ozaner\TeX{} is a \TeX{} package of miscellaneous commands, preformatting, and default package inclusions. Rather than append these definitions at the top of all my \LaTeX{} files, I decided to factor them out as a package.
+
+This document will serve as documentation, both in the form of examples and rationale, of this package. It also serves as a sort of unit test because, if it compiles, the package probably works.
+
+\tableofcontents
+
+\newpage{}
+
+\section{Preformatting}
+\subsection{Margins}
+Via the \texttt{geometry} package, \Ozaner\TeX{} changes the default margin size to 1.5in.\ For reference, the article document class uses a margin size of 1.875in.
+
+\subsection{Title starting height}
+Using the \texttt{titling} package, set the starting height of the title back by 7em.
+
+\subsection{Hyper-reference styling}
+Instead of colored boxes, hyper-references use colored text instead:
+\begin{itemize}
+  \item Internal link: \textcolor{blue}{blue}
+  \item File link: \textcolor{magenta}{magenta}
+  \item URL: \textcolor{cyan}{cyan}
+\end{itemize}
+
+\section{Base packages}
+The \Ozaner\TeX{} package includes several \texttt{\textbackslash usepackage} declarations. These are packages that I use commonly enough to simply include in every document. These packages are, in order of inclusion, listed below:
+\begin{itemize}
+  \item \href{https://ctan.org/pkg/titling}{\texttt{fontenc}}: properly renders certain special characters in text-mode.
+  \item \href{https://ctan.org/pkg/geometry}{\texttt{geometry}}: used to adjust the document margins.
+  \item \href{https://ctan.org/pkg/titling}{\texttt{titling}}: used to push back the title starting height.
+  \item \href{https://ctan.org/pkg/hyperref}{\texttt{hyperref}}: adds commands for hyper-referencing, and adds hyper-references to the table of contents.
+  \item \href{https://ctan.org/pkg/amsfonts}{\texttt{amssymb}}: Adds many useful mathematical symbols (e.g.\ blackboard bold letters ($\mathbb{R}$), arrows ($\curvearrowright$), inequalities ($\ngeq$), etc.).
+  \item \href{https://ctan.org/pkg/amsmath}{\texttt{amsmath}}: A general math package that adds many misc.\ features including: equation alignment, matrix environments, fraction variants, extensible arrows, creating operators, and substacks.
+\end{itemize}
+
+\section{Textual Commands}
+\subsection{\texttt{\textbackslash Ozaner} \& \texttt{\textbackslash Ozanerbf}}
+\texttt{\textbackslash Ozaner\{\}} $\longrightarrow$ \Ozaner{}\\
+\texttt{\textbackslash Ozanerbf\{\}} $\longrightarrow$ \Ozanerbf{}
+
+\noindent\\The stylized version of my name I use in various places, including this package. The bolded version (i.e.\ \texttt{\textbackslash Ozanerbf}) is necessary as \texttt{\textbackslash textbf} won't boldface embedded math symbols.
+
+\noindent\\\textit{Note}: to typeset \Ozaner\TeX{} simply append \texttt{\textbackslash TeX} to the command, i.e.\ \texttt{\textbackslash Ozaner\textbackslash TeX\{\}}.
+
+\end{document}

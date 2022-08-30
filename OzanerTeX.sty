@@ -1,0 +1,34 @@
+%%% OzanerTeX Package Declaration
+\ProvidesPackage{OzanerTeX}
+
+%%% Packages
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage{titling}
+\usepackage{hyperref}
+\usepackage{amssymb}
+\usepackage{amsmath}
+
+
+%%% Preformatting
+% Set page margins to 1.5in.
+\newgeometry{margin=1.5in}
+
+% Set default starting height of first page.
+\setlength{\droptitle}{-7em}
+
+% Hyperreference style settings
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  filecolor=magenta,
+  urlcolor=cyan,
+}
+
+
+%%% Text
+% Stylized 'Ozaner'
+\newcommand{\Ozaner}{Oz$\forall$n$\in$$\mathbb R$} 
+
+% Stylized 'Ozaner' in bold
+\newcommand{\Ozanerbf}{\textbf{Oz$\boldsymbol\forall$n$\boldsymbol\in$$\boldsymbol{\mathbb R}$}}
